@@ -1,38 +1,123 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ejemplo de PWA</title>
-    <script src="js/registraServiceWorker.js"></script>
 
-    <!-- Ícono para la página web. Debe ponerse en la raíz de la página. -->
-    <link rel="icon" sizes="32x32" href="favicon.ico">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculadora</title>
+  <style>
+    footer {
+      position: absolute;
+      background: purple;
+      color: white;
+      width: 100%;
 
-    <!-- Color de la barra de navegación de Chrome en dispositivos móviles. -->
-    <meta name="theme-color" content="#81d4f4">
+      bottom: -50px;
+    }
+  </style>
+  <style type="text/css">
+    body {
+      background-color: rgb(192, 255, 245);
+      text-align: center;
+      color: #000000;
+    }
 
-    <!-- Configuración de la PWA: Chrome y Edge. -->
-    <link rel="manifest" href="manifest.json">
+    .abc {
+      font-family: Century Gothic, Times, serif;
+    }
 
-    <!-- Configuración para Web Clip en Safari. -->
-    <meta name="apple-mobile-web-app-title" content="dmppwa">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <link rel="apple-touch-icon" href="img/icono2048.png">
-    <link rel="apple-touch-icon" sizes="256x256" href="img/icono256.png">
-    <link rel="apple-touch-icon" sizes="1024x1024" href="img/icono1024.png">
-    <link rel="apple-touch-icon" sizes="2048x2048" href="img/icono2048.png">
+    .ac {
+      font-family: Garamond, Helvetica, sans-serif;
+    }
+  </style>
+</head>
 
-    <script type="module" src="cmp/mi-footer.js"></script>
-    <link rel="stylesheet" href="css/estilos.css">
-  <body>
-    <h1>Ejemplo de PWA</h1>
-    <p>Hola</p>
-    <footer>
-      <p>
-        <mi-footer></mi-footer>
-      </p>
-    </footer>
-  </body>
+</style>
+<script type="text/javascript">
+  <script src="js/registraServiceWorker.js"></script>
+
+<!-- Ícono para la página web. Debe ponerse en la raíz de la página. -->
+<link rel="icon" sizes="32x32" href="favicon.ico">
+
+<!-- Color de la barra de navegación de Chrome en dispositivos móviles. -->
+<meta name="theme-color" content="#81d4f4">
+
+<!-- Configuración de la PWA: Chrome y Edge. -->
+<link rel="manifest" href="manifest.json">
+
+<!-- Configuración para Web Clip en Safari. -->
+<meta name="apple-mobile-web-app-title" content="dmppwa">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="apple-touch-icon" href="img/icono2048.png">
+<link rel="apple-touch-icon" sizes="256x256" href="img/icono256.png">
+<link rel="apple-touch-icon" sizes="1024x1024" href="img/icono1024.png">
+<link rel="apple-touch-icon" sizes="2048x2048" href="img/icono2048.png">
+
+<script type="module" src="cmp/mi-footer.js"></script>
+<style>
+  .Cal {
+    display: block;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #59c7f3;
+    height: 600px;
+    border-radius: 25px;
+  }
+
+  .numeros {
+    background-color: #bbffcc;
+    padding: 1rem;
+    border: thick solid #240cfade;
+    margin: 1em;
+  }
+
+  .calcular {
+    background-color: #4effe2;
+    padding: 1rem;
+    border: thick solid #001e72;
+    margin: 1em;
+  }
+</style>
+
+
+</head>
+
+<body>
+  <div class="Calculadora">
+
+    <tr>
+      <h1> Calcular la Densidad </h1>
+    </tr>
+
+    <tr>
+      <h2> D=M/V </h2>
+    </tr>
+
+    <div class="numeros">
+      <tr>
+        Ingresa la masa: <input id="num1" type="number" />
+      </tr>
+    </div>
+
+    <div class="numeros">
+      <tr>
+        Ingresa el volumen : <input id="num2" type="number" />
+      </tr>
+    </div>
+
+
+    <div class="calcular">
+      <tr>
+        <input type="button" value="Calcular la Densidad" onclick="operaciones('densidad'); return false;" />
+      </tr>
+    </div>
+
+    <footer>ABRIL GEORGINA BARRERA ESTRADA IC-51M </footer>
+    
+    <script src="funcionalidad.js"></script>
+
+    
+</body>
+
 </html>
