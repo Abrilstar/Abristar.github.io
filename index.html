@@ -1,101 +1,102 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Calculadora</title>
-  </style>
-  <style type="text/css">
-  body {
-    background-color: rgb(192, 221, 255) ;
-    text-align: center;
-    color: #000000;
-  }
+<head>
+  <link rel="icon" sizes="32x32" href="favicon.ico">
+
+  <!-- Color de la barra de navegación de Chrome en dispositivos móviles. -->
+  <meta name="theme-color" content="#81d4f4">
+
+  <!-- Configuración de la PWA: Chrome y Edge. -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-title" content="fannypwa">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="apple-touch-icon" href="img/2048.png">
+  <link rel="apple-touch-icon" sizes="256x256" href="img/icono256.png">
+  <link rel="apple-touch-icon" sizes="1024x1024" href="img/icono1024.png">
+  <link rel="apple-touch-icon" sizes="2048x2048" href="img/2048.png">
+
+  <script type="module" src="cmp/mi-footer.js"></script>
+
+<meta charset="utf-8">
+<title> Calculadora  </title>
+<style>
+.Calculadora{
+  display:block;
+  margin:0 auto;
+  padding:50px;
+  background-color:#f8f8f8;
+  height:640px;
+
+}
+
+.numeros {
+  background-color :#4efff6 ;
+  padding: 1rem;
+  border: thick solid #100cfade;
+  margin: 1em;
+}
+.calcular{
+  background-color :#4efff6 ;
+  padding: 1rem;
+  border: thick solid #020072;
+  margin: 1em;
+}
 </style>
-  </style>
-    <script src="js/registraServiceWorker.js"></script>
+<style type="text/css">
+body {
+  background-color: rgb(192, 221, 255) ;
+  text-align: center;
+  color: #000000;
+}
+</style>
 
-    <!-- Ícono para la página web. Debe ponerse en la raíz de la página. -->
-    <link rel="icon" sizes="32x32" href="favicon.ico">
+</head>
+<body >
+  <div class="Calculadora">
 
-    <!-- Color de la barra de navegación de Chrome en dispositivos móviles. -->
-    <meta name="theme-color" content="#81d4f4">
+  <tr>
+    <h1> Calcula la Densidad </h1>
+  </tr>
 
-    <!-- Configuración de la PWA: Chrome y Edge. -->
-    <link rel="manifest" href="manifest.json">
+  <tr>
+    <h2> D=M/V </h2>
+  </tr>
 
-    <!-- Configuración para Web Clip en Safari. -->
-    <meta name="apple-mobile-web-app-title" content="dmppwa">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <link rel="apple-touch-icon" href="img/icono2048.png">
-    <link rel="apple-touch-icon" sizes="256x256" href="img/icono256.png">
-    <link rel="apple-touch-icon" sizes="1024x1024" href="img/icono1024.png">
-    <link rel="apple-touch-icon" sizes="2048x2048" href="img/icono2048.png">
+  <tr>
+    <h1> Toda la materia posee masa y volumen, sin embargo la masa de sustancias
+       diferentes ocupan distintos volúmenes. </h1>
+  </tr>
 
-    <script type="module" src="cmp/mi-footer.js"></script>
-    <style>
-      
-      .Cal{
-        display:block;
-        margin:0 auto;
-        padding:30px;
-        background-color:#59c7f3;
-        height:600px;
-        border-radius: 25px;
-      }
-      
-      .numeros {
-        background-color :#bbffcc ;
-        padding: 1rem;
-        border: thick solid #240cfade;
-        margin: 1em;
-      }
-      .calcular{
-        background-color :#4effe2 ;
-        padding: 1rem;
-        border: thick solid #001e72;
-        margin: 1em;
-      }
-      </style>
-      
-      
-      </head>
-      <body >
-        <div class="Calculadora">
-      
-        <tr>
-          <h1> Calcular la Densidad </h1>
-        </tr>
-      
-        <tr>
-          <h2> D=M/V </h2>
-        </tr>
-      
-        <div class ="numeros"><tr>
-        Ingresa la masa: <input id="num1" type="number" />
-      </tr>
-      </div>
-      
-      <div class ="numeros"><tr>
-          Ingresa el volumen : <input id="num2" type="number" />
-        </tr>
-      </div>
-      
-      
-      <div class ="calcular"><tr>
-        <input type="button" value="Calcular la Densidad" onclick="operaciones('densidad'); return false;" />
-      </tr>
-      </div>
-      <footer>
-        <p>
-          Copyright &copy; Abril Georgina Barrera Estrada
-        </p>
-      </footer>
-        </div>
-    
-      <script src="funcionalidad.js"
-      ></script>
-      
-      </body>
-      </html>
+  <div class ="numeros"><tr>
+  Ingresa la masa: <input id="num1" type="number" />
+</tr>
+</div>
+
+<div class ="numeros"><tr>
+    Ingresa el volumen : <input id="num2" type="number" />
+  </tr>
+</div>
+
+<div class ="numeros"><tr>
+    <p id="resultado" style="color: #2f00fff3;"></p>
+  </tr>
+</div>
+
+<div class ="calcular"><tr>
+  <input type="button" value="Calcular la Densidad" onclick="operaciones('densidad'); return false;" />
+</tr>
+</div>
+
+<footer>
+  <p>
+    Copyright &copy; Abril Georgina Barrera Estrada
+  </p>
+</footer>
+  </div>
+
+<script src="funtions.js"
+></script>
+
+</body>
+</html>
